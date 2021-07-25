@@ -75,9 +75,10 @@ saverFont = pygame.font.Font('freesansbold.ttf',24)
 
 class OctoMiniScreen():
 	# Main OctoMiniScreen Class
+	pathName=os.path.dirname(__file__)
 
 	# Define class global variables
-	configFile = "/home/pi/OctoMiniScreen/octominiscreen.cfg"
+	configFile = pathName+"/octominiscreen.cfg"
 
 	# Maximum number of characters to show for the filename.
 	# Avoids text running into the button
@@ -276,9 +277,9 @@ class OctoMiniScreen():
 		self.screen = pygame.display.set_mode( (self.Width, self.Height) )
 
 		# Load any icons
-		self.upArrowImg = pygame.image.load("icons/up_arrow.jpg").convert()
-		self.downArrowImg = pygame.image.load("icons/down_arrow.jpg").convert()
-		self.deleteImg = pygame.image.load("icons/delete.png").convert()
+		self.upArrowImg = pygame.image.load(self.pathName+"/icons/up_arrow.jpg").convert()
+		self.downArrowImg = pygame.image.load(self.pathName+"/icons/down_arrow.jpg").convert()
+		self.deleteImg = pygame.image.load(self.pathName+"/icons/delete.png").convert()
 
 		# Init buttons
 		# Calculate size
